@@ -1,0 +1,28 @@
+.video-wrapper {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-wrapper::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(152, 187, 237, 0.238); // TODO
+    pointer-events: none;
+}
+
+video {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

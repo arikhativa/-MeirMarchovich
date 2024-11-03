@@ -17,7 +17,6 @@ export class NavbarComponent {
     constructor(private router: Router) {}
 
     ngOnInit(): void {
-        console.log('activeIndexi', this.activeIndex)
         this.router.events
             .pipe(
                 filter(
@@ -40,8 +39,6 @@ export class NavbarComponent {
             event.urlAfterRedirects as keyof typeof ROUTER_PATHS
         )
 
-        console.log('event.urlAfterRedirects', event.urlAfterRedirects)
-        console.log('i', i)
         this.activeIndex = i
     }
 
