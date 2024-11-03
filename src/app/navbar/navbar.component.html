@@ -1,3 +1,9 @@
 <nav class="fixed h-10rem w-screen top-0">
-    <a routerLink="/">Home</a>
+    <a
+        *ngFor="let page of allPages; index as i"
+        [class.active]="isActive(i)"
+        [routerLink]="page.path"
+    >
+        {{ page.title }}
+    </a>
 </nav>

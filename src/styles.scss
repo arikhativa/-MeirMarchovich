@@ -1,21 +1,15 @@
 // For PrimeNG
-@import 'primeng/resources/themes/aura-dark-teal/theme.css';
+@import 'primeng/resources/themes/aura-light-blue/theme.css';
 @import 'primeng/resources/primeng.css';
 @import 'primeicons/primeicons.css';
 @import 'primeflex/primeflex.css';
 
 :root {
-    // Colors
-
-    // override PrimeNG //TODO
     --font-family: 'Inconsolata', monospace;
-    --text-color: #fff;
-    --primary-color: black;
 }
 
 html,
 body {
-    pointer-events: none; // TODO
     margin: 0;
     padding: 0;
 }
@@ -23,11 +17,6 @@ body {
 * {
     outline: none; // remove focus outline
     -webkit-tap-highlight-color: transparent; // remove tap highlight
-}
-
-// TODO
-p-button {
-    pointer-events: auto;
 }
 
 .bg-blue {

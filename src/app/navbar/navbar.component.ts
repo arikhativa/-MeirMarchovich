@@ -1,7 +1,8 @@
-import { Component, HostListener, Input } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 import { filter } from 'rxjs'
-import { routerPaths } from '../misc/strings'
+import { pathToIndex } from '../misc/utils'
+import { PagesNames, ROUTER_PATHS } from '../misc/types'
 
 @Component({
     selector: 'app-navbar',
@@ -11,11 +12,12 @@ import { routerPaths } from '../misc/strings'
 export class NavbarComponent {
     @Input() isSideways!: boolean
     activeIndex: number = 0
-    routerLinks = routerPaths
+    allPages: { path: ROUTER_PATHS; title: PagesNames }[] = []
 
     constructor(private router: Router) {}
 
     ngOnInit(): void {
+        console.log('activeIndexi', this.activeIndex)
         this.router.events
             .pipe(
                 filter(
@@ -24,10 +26,23 @@ export class NavbarComponent {
                 )
             )
             .subscribe(this.setIndexViaURL)
+
+        this.allPages = Object.keys(ROUTER_PATHS).map((key) => {
+            return {
+                path: ROUTER_PATHS[key as keyof typeof ROUTER_PATHS],
+                title: PagesNames[key as keyof typeof PagesNames],
+            }
+        })
     }
 
     setIndexViaURL = (event: NavigationEnd) => {
-        this.activeIndex = this.routerLinks.indexOf(event.urlAfterRedirects)
+        const i = pathToIndex(
+            event.urlAfterRedirects as keyof typeof ROUTER_PATHS
+        )
+
+        console.log('event.urlAfterRedirects', event.urlAfterRedirects)
+        console.log('i', i)
+        this.activeIndex = i
     }
 
     setActive(i: number) {

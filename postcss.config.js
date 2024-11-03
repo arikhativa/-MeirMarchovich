@@ -1,8 +1,8 @@
 module.exports = {
-    css: ['./dist/TODO-ProjectName/browser/*.css'],
+    css: ['./dist/MeirMarchovich/browser/*.css'],
     content: [
-        './dist/TODO-ProjectName/browser/index.html',
-        './dist/TODO-ProjectName/browser/*.js',
+        './dist/MeirMarchovich/browser/index.html',
+        './dist/MeirMarchovich/browser/*.js',
     ],
-    output: './dist/TODO-ProjectName/browser/',
+    output: './dist/MeirMarchovich/browser/',
 }
