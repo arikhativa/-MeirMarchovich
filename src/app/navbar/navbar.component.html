@@ -1,9 +1,14 @@
-<nav class="fixed h-10rem w-screen top-0">
-    <a
-        *ngFor="let page of allPages; index as i"
-        [class.active]="isActive(i)"
-        [routerLink]="page.path"
-    >
-        {{ page.title }}
-    </a>
+<nav
+    class="fixed h-5rem w-screen top-0 flex justify-content-start align-items-center gap-5"
+>
+    <app-logo class="h-4rem ml-5"></app-logo>
+    <div class="flex-1 flex justify-content-center align-items-center gap-5">
+        <a
+            *ngFor="let page of allPages; index as i"
+            [class.active]="isActive(i)"
+            [routerLink]="page.path"
+        >
+            {{ page.title }}
+        </a>
+    </div>
 </nav>
