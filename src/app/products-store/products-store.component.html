@@ -19,6 +19,21 @@
                     <div
                         class="p-4 border-1 surface-border surface-card border-round flex flex-column"
                     >
+                        <span
+                            class="flex font-medium text-secondary text-sm gap-2"
+                        >
+                            <p-tag
+                                class="pb-2"
+                                [value]="product.type"
+                                [severity]="getColorByType(product.type)"
+                            />
+                            <p-tag
+                                [value]="product.subtype"
+                                severity="secondary"
+                                [rounded]="true"
+                            />
+                        </span>
+
                         <div
                             class="surface-50 flex justify-content-center border-round p-3"
                         >
@@ -36,12 +51,6 @@
                                 class="flex flex-row justify-content-between align-items-start gap-2"
                             >
                                 <div>
-                                    <span
-                                        class="font-medium text-secondary text-sm"
-                                    >
-                                        {{ product.type }} -
-                                        {{ product.subtype }}
-                                    </span>
                                     <div
                                         class="text-lg font-medium text-900 mt-1"
                                     >

@@ -21,6 +21,7 @@ import { ProductsStoreComponent } from '../products-store/products-store.compone
 import { FilterService } from 'primeng/api'
 import { DataViewModule } from 'primeng/dataview'
 import { ImageModule } from 'primeng/image'
+import { TagModule } from 'primeng/tag'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -40,6 +41,7 @@ import { ImageModule } from 'primeng/image'
     ],
     providers: [FilterService],
     imports: [
+        TagModule,
         ImageModule,
         DataViewModule,
         CardModule,

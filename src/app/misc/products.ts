@@ -1,80 +1,93 @@
+export enum ProductType {
+    METALS = 'Metals',
+    PLASTICS = 'Plastics',
+}
+
+export enum ProductSubType {
+    IRON = 'Iron',
+    STEAL = 'Steal',
+    ALUMINUM = 'Aluminum',
+    POLYETHYLENE = 'Polyethylene',
+    PARAFFIN = 'Paraffin',
+}
+
 export interface Product {
     name: string
     img: string
-    type: string
-    subtype: string
+    type: ProductType
+    subtype: ProductSubType
 }
 
 export const allProducts: Product[] = [
     {
-        type: 'metals',
-        subtype: 'iron',
+        type: ProductType.METALS,
+        subtype: ProductSubType.IRON,
         name: 'iron 500',
         img: '',
     },
     {
-        type: 'metals',
-        subtype: 'iron',
+        type: ProductType.METALS,
+        subtype: ProductSubType.IRON,
         name: 'cast iron',
         img: '',
     },
     {
-        type: 'metals',
-        subtype: 'iron',
+        type: ProductType.METALS,
+        subtype: ProductSubType.IRON,
         name: 'iron shells',
         img: '',
     },
     {
-        type: 'metals',
-        subtype: 'steal',
+        type: ProductType.METALS,
+        subtype: ProductSubType.STEAL,
         name: 'steal 63',
         img: '',
     },
     {
-        type: 'metals',
-        subtype: 'steal',
+        type: ProductType.METALS,
+        subtype: ProductSubType.STEAL,
         name: 'arch steal',
         img: '',
     },
     {
-        type: 'metals',
-        subtype: 'aluminum',
+        type: ProductType.METALS,
+        subtype: ProductSubType.ALUMINUM,
         name: 'kitchen aluminum',
         img: '',
     },
     {
-        type: 'metals',
-        subtype: 'aluminum',
+        type: ProductType.METALS,
+        subtype: ProductSubType.ALUMINUM,
         name: ' aluminum oxide',
         img: '',
     },
     {
-        type: 'plastics',
-        subtype: 'polyethylene',
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.POLYETHYLENE,
         name: 'polyethylene 500',
         img: '',
     },
     {
-        type: 'plastics',
-        subtype: 'polyethylene',
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.POLYETHYLENE,
         name: 'polyethylene 1000',
         img: '',
     },
     {
-        type: 'plastics',
-        subtype: 'polyethylene',
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.POLYETHYLENE,
         name: 'polyethylene 2000',
         img: '',
     },
     {
-        type: 'plastics',
-        subtype: 'paraffin',
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.PARAFFIN,
         name: 'paraffin monoxide',
         img: '',
     },
     {
-        type: 'plastics',
-        subtype: 'paraffin',
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.PARAFFIN,
         name: 'paraffin 36',
         img: '',
     },

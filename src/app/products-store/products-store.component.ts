@@ -1,6 +1,15 @@
 import { Component } from '@angular/core'
-import { allProducts, Product } from '../misc/products'
+import { allProducts, Product, ProductType } from '../misc/products'
 import { FilterService } from 'primeng/api'
+
+type TagColor =
+    | 'success'
+    | 'secondary'
+    | 'info'
+    | 'warning'
+    | 'danger'
+    | 'contrast'
+    | undefined
 
 @Component({
     selector: 'app-products-store',
@@ -18,5 +27,12 @@ export class ProductsStoreComponent {
             product.img = `assets/images/gallery/${index}.jpg`
         })
         this.products = this.allProducts
+    }
+
+    getColorByType(type: ProductType): TagColor {
+        if (type === ProductType.METALS) {
+            return 'success'
+        }
+        return undefined
     }
 }
