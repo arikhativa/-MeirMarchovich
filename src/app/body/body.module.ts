@@ -14,7 +14,9 @@ import { MultiImage4Component } from '../multi-image-4/multi-image-4.component';
 import { MultiImage2Component } from '../multi-image-2/multi-image-2.component';
 import { MultiImage3Component } from '../multi-image-3/multi-image-3.component';
 import { SingleImageComponent } from '../single-image/single-image.component';
-import { AboutSectionComponent } from '../about-section/about-section.component'
+import { AboutSectionComponent } from '../about-section/about-section.component';
+import { ProductsComponent } from '../products/products.component';
+import { ProductsHeroComponent } from '../products-hero/products-hero.component'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -28,6 +30,8 @@ import { AboutSectionComponent } from '../about-section/about-section.component'
         MultiImage3Component,
         SingleImageComponent,
         AboutSectionComponent,
+        ProductsComponent,
+        ProductsHeroComponent,
     ],
     imports: [
         CardModule,
