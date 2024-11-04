@@ -1,0 +1,58 @@
+<article class="mx-8">
+    <p-dataView
+        #dv
+        [value]="products"
+        [layout]="'grid'"
+    >
+        <ng-template pTemplate="header">
+            <div class="flex justify-content-start gap-3">
+                <h1>filters</h1>
+                <h1>sorts</h1>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="grid">
+            <div class="grid grid-nogutter">
+                <div
+                    class="col-12 sm:col-6 md:col-4 lg:col-3 xl:col-3 p-2"
+                    *ngFor="let product of products"
+                >
+                    <div
+                        class="p-4 border-1 surface-border surface-card border-round flex flex-column"
+                    >
+                        <div
+                            class="surface-50 flex justify-content-center border-round p-3"
+                        >
+                            <div class="relative mx-auto">
+                                <p-image
+                                    class="border-round"
+                                    [src]="product.img"
+                                    [alt]="product.name"
+                                    [preview]="true"
+                                ></p-image>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <div
+                                class="flex flex-row justify-content-between align-items-start gap-2"
+                            >
+                                <div>
+                                    <span
+                                        class="font-medium text-secondary text-sm"
+                                    >
+                                        {{ product.type }} -
+                                        {{ product.subtype }}
+                                    </span>
+                                    <div
+                                        class="text-lg font-medium text-900 mt-1"
+                                    >
+                                        {{ product.name }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+</article>

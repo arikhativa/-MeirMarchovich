@@ -8,15 +8,19 @@ import { VidComponent } from '../vid/vid.component'
 import { GalleryComponent } from '../gallery/gallery.component'
 import { GalleriaModule } from 'primeng/galleria'
 import { ButtonModule } from 'primeng/button'
-import { CardModule } from 'primeng/card';
-import { MultiImageComponent } from '../multi-image/multi-image.component';
-import { MultiImage4Component } from '../multi-image-4/multi-image-4.component';
-import { MultiImage2Component } from '../multi-image-2/multi-image-2.component';
-import { MultiImage3Component } from '../multi-image-3/multi-image-3.component';
-import { SingleImageComponent } from '../single-image/single-image.component';
-import { AboutSectionComponent } from '../about-section/about-section.component';
-import { ProductsComponent } from '../products/products.component';
+import { CardModule } from 'primeng/card'
+import { MultiImageComponent } from '../multi-image/multi-image.component'
+import { MultiImage4Component } from '../multi-image-4/multi-image-4.component'
+import { MultiImage2Component } from '../multi-image-2/multi-image-2.component'
+import { MultiImage3Component } from '../multi-image-3/multi-image-3.component'
+import { SingleImageComponent } from '../single-image/single-image.component'
+import { AboutSectionComponent } from '../about-section/about-section.component'
+import { ProductsComponent } from '../products/products.component'
 import { ProductsHeroComponent } from '../products-hero/products-hero.component'
+import { ProductsStoreComponent } from '../products-store/products-store.component'
+import { FilterService } from 'primeng/api'
+import { DataViewModule } from 'primeng/dataview'
+import { ImageModule } from 'primeng/image'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -32,8 +36,12 @@ import { ProductsHeroComponent } from '../products-hero/products-hero.component'
         AboutSectionComponent,
         ProductsComponent,
         ProductsHeroComponent,
+        ProductsStoreComponent,
     ],
+    providers: [FilterService],
     imports: [
+        ImageModule,
+        DataViewModule,
         CardModule,
         ButtonModule,
         RouterModule,
