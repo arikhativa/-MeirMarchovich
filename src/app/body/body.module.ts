@@ -7,6 +7,7 @@ import { LogoComponent } from '../logo/logo.component'
 import { VidComponent } from '../vid/vid.component'
 import { GalleryComponent } from '../gallery/gallery.component'
 import { GalleriaModule } from 'primeng/galleria'
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,7 @@ import { GalleriaModule } from 'primeng/galleria'
         VidComponent,
         GalleryComponent,
     ],
-    imports: [RouterModule, CommonModule, GalleriaModule],
+    imports: [MenubarModule, RouterModule, CommonModule, GalleriaModule],
     exports: [IntroComponent, NavbarComponent],
 })
 export class BodyModule {}

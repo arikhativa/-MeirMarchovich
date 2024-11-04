@@ -3,50 +3,39 @@ import { NavigationEnd, Router } from '@angular/router'
 import { filter } from 'rxjs'
 import { pathToIndex } from '../misc/utils'
 import { PagesNames, ROUTER_PATHS } from '../misc/types'
-
+import { MenuItem } from 'primeng/api'
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-    @Input() isSideways!: boolean
-    activeIndex: number = 0
-    allPages: { path: ROUTER_PATHS; title: PagesNames }[] = []
-
     constructor(private router: Router) {}
 
-    ngOnInit(): void {
-        this.router.events
-            .pipe(
-                filter(
-                    (event): event is NavigationEnd =>
-                        event instanceof NavigationEnd
-                )
-            )
-            .subscribe(this.setIndexViaURL)
+    items!: MenuItem[]
 
-        this.allPages = Object.keys(ROUTER_PATHS).map((key) => {
-            return {
-                path: ROUTER_PATHS[key as keyof typeof ROUTER_PATHS],
-                title: PagesNames[key as keyof typeof PagesNames],
-            }
-        })
-    }
-
-    setIndexViaURL = (event: NavigationEnd) => {
-        const i = pathToIndex(
-            event.urlAfterRedirects as keyof typeof ROUTER_PATHS
-        )
-
-        this.activeIndex = i
-    }
-
-    setActive(i: number) {
-        this.activeIndex = i
-    }
-
-    isActive(i: number) {
-        return this.activeIndex === i
+    ngOnInit() {
+        this.items = [
+            {
+                label: PagesNames.HOME,
+                route: ROUTER_PATHS.HOME,
+            },
+            {
+                label: PagesNames.PRODUCTS,
+                route: ROUTER_PATHS.PRODUCTS,
+            },
+            {
+                label: PagesNames.ABOUT,
+                route: ROUTER_PATHS.ABOUT,
+            },
+            {
+                label: PagesNames.CONTACT,
+                route: ROUTER_PATHS.CONTACT,
+            },
+            {
+                label: PagesNames.LICENSES,
+                route: ROUTER_PATHS.LICENSES,
+            },
+        ]
     }
 }

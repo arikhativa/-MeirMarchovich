@@ -2,13 +2,23 @@
     class="fixed h-5rem w-screen top-0 flex justify-content-start align-items-center gap-5 z-5"
 >
     <app-logo class="h-4rem ml-5"></app-logo>
+
     <div class="flex-1 flex justify-content-center align-items-center gap-5">
-        <a
-            *ngFor="let page of allPages; index as i"
-            [class.active]="isActive(i)"
-            [routerLink]="page.path"
-        >
-            {{ page.title }}
-        </a>
+        <p-menubar [model]="items">
+            <ng-template
+                pTemplate="item"
+                let-item
+            >
+                <ng-container *ngIf="item.route">
+                    <a
+                        [routerLink]="item.route"
+                        class="p-menuitem-link"
+                    >
+                        <span [class]="item.icon"></span>
+                        <span class="ml-2">{{ item.label }}</span>
+                    </a>
+                </ng-container>
+            </ng-template>
+        </p-menubar>
     </div>
 </nav>
