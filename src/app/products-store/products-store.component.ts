@@ -1,6 +1,11 @@
 import { Component } from '@angular/core'
-import { allProducts, Product, ProductType } from '../misc/products'
-import { FilterService } from 'primeng/api'
+import { Product, ProductType } from '../misc/products'
+import { ProductsService } from '../products.service'
+
+interface MultiSelectType {
+    name: ProductType
+    code: ProductType
+}
 
 type TagColor =
     | 'success'
@@ -17,16 +22,19 @@ type TagColor =
     styleUrl: './products-store.component.scss',
 })
 export class ProductsStoreComponent {
-    allProducts: Product[] = allProducts
+    multiSelectTypes: MultiSelectType[] = [
+        { name: ProductType.METALS, code: ProductType.METALS },
+        { name: ProductType.PLASTICS, code: ProductType.PLASTICS },
+    ]
+
+    selectedTypes: MultiSelectType[] = [...this.multiSelectTypes]
+
     products!: Product[]
 
-    constructor(private filterService: FilterService) {}
+    constructor(private productsService: ProductsService) {}
 
     ngOnInit() {
-        this.allProducts.forEach((product, index) => {
-            product.img = `assets/images/gallery/${index}.jpg`
-        })
-        this.products = this.allProducts
+        this.products = this.productsService.allProducts
     }
 
     getColorByType(type: ProductType): TagColor {
@@ -34,5 +42,17 @@ export class ProductsStoreComponent {
             return 'success'
         }
         return undefined
+    }
+
+    filterByType(type: ProductType) {
+        this.products = this.productsService.allProducts.filter(
+            (product) => product.type === type
+        )
+    }
+
+    onSelectedTypesChange() {
+        this.products = this.productsService.allProducts.filter((product) =>
+            this.selectedTypes.some((type) => type.code === product.type)
+        )
     }
 }

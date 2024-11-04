@@ -18,10 +18,13 @@ import { AboutSectionComponent } from '../about-section/about-section.component'
 import { ProductsComponent } from '../products/products.component'
 import { ProductsHeroComponent } from '../products-hero/products-hero.component'
 import { ProductsStoreComponent } from '../products-store/products-store.component'
-import { FilterService } from 'primeng/api'
 import { DataViewModule } from 'primeng/dataview'
 import { ImageModule } from 'primeng/image'
 import { TagModule } from 'primeng/tag'
+import { ProductsService } from '../products.service'
+import { InputTextModule } from 'primeng/inputtext'
+import { FormsModule } from '@angular/forms'
+import { MultiSelectModule } from 'primeng/multiselect'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -39,9 +42,12 @@ import { TagModule } from 'primeng/tag'
         ProductsHeroComponent,
         ProductsStoreComponent,
     ],
-    providers: [FilterService],
+    providers: [ProductsService],
     imports: [
+        MultiSelectModule,
         TagModule,
+        FormsModule,
+        InputTextModule,
         ImageModule,
         DataViewModule,
         CardModule,

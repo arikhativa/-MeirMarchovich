@@ -6,8 +6,17 @@
     >
         <ng-template pTemplate="header">
             <div class="flex justify-content-start gap-3">
-                <h1>filters</h1>
-                <h1>sorts</h1>
+                <div>
+                    <p-multiSelect
+                        [options]="multiSelectTypes"
+                        [(ngModel)]="selectedTypes"
+                        (ngModelChange)="onSelectedTypesChange()"
+                        [filter]="true"
+                        optionLabel="name"
+                        showHeader
+                        placeholder="Select Types"
+                    />
+                </div>
             </div>
         </ng-template>
         <ng-template pTemplate="grid">
