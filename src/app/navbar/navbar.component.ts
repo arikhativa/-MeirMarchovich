@@ -10,7 +10,8 @@ import { PagesNames, ROUTER_PATHS } from '../misc/types'
     styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-    @Input() isSideways!: boolean
+    @Input() isMobile!: boolean
+    isMenuOpen: boolean = false
     activeIndex: number = 0
     allPages: { path: ROUTER_PATHS; title: PagesNames }[] = []
 
@@ -48,5 +49,9 @@ export class NavbarComponent {
 
     isActive(i: number) {
         return this.activeIndex === i
+    }
+
+    toggleMenu() {
+        this.isMenuOpen = !this.isMenuOpen
     }
 }
