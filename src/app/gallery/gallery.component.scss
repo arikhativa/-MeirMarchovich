@@ -1,16 +1,10 @@
-.single-image {
+.image-con {
     height: 100%;
     aspect-ratio: 1;
-    background-color: lightcoral;
-}
-
-.multi-image {
-    height: 100%;
-    aspect-ratio: 10/4;
 }
 
 .animation-go-left {
-    animation: go-left 10s infinite linear;
+    animation: go-left 30s infinite linear;
 }
 
 @keyframes go-left {

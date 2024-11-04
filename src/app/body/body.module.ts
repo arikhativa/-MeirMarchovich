@@ -9,7 +9,11 @@ import { GalleryComponent } from '../gallery/gallery.component'
 import { GalleriaModule } from 'primeng/galleria'
 import { ButtonModule } from 'primeng/button'
 import { CardModule } from 'primeng/card';
-import { MultiImageComponent } from '../multi-image/multi-image.component'
+import { MultiImageComponent } from '../multi-image/multi-image.component';
+import { MultiImage4Component } from '../multi-image-4/multi-image-4.component';
+import { MultiImage2Component } from '../multi-image-2/multi-image-2.component';
+import { MultiImage3Component } from '../multi-image-3/multi-image-3.component';
+import { SingleImageComponent } from '../single-image/single-image.component'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -18,6 +22,10 @@ import { MultiImageComponent } from '../multi-image/multi-image.component'
         VidComponent,
         GalleryComponent,
         MultiImageComponent,
+        MultiImage4Component,
+        MultiImage2Component,
+        MultiImage3Component,
+        SingleImageComponent,
     ],
     imports: [
         CardModule,

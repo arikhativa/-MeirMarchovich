@@ -1,14 +1,16 @@
-<div class="relative w-full h-full">
-    <div class="absolute overflow-hidden top-left">
-        <img [src]="images[0]" />
-    </div>
-    <div class="absolute overflow-hidden top-right">
-        <img [src]="images[1]" />
-    </div>
-    <div class="absolute overflow-hidden bottom-left">
-        <img [src]="images[2]" />
-    </div>
-    <div class="absolute overflow-hidden bottom-right">
-        <img [src]="images[3]" />
-    </div>
-</div>
+<app-single-image
+    [image]="image"
+    *ngIf="image"
+></app-single-image>
+<app-multi-image-2
+    [images]="images || []"
+    *ngIf="images?.length === 2"
+></app-multi-image-2>
+<app-multi-image-3
+    [images]="images || []"
+    *ngIf="images?.length === 3"
+></app-multi-image-3>
+<app-multi-image-4
+    [images]="images || []"
+    *ngIf="images?.length === 4"
+></app-multi-image-4>

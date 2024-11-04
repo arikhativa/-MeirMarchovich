@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core'
     styleUrl: './multi-image.component.scss',
 })
 export class MultiImageComponent {
-    @Input() images!: string[]
+    @Input() images?: string[]
+    @Input() image?: string
 }
