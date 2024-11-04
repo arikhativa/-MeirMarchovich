@@ -8,7 +8,8 @@ import { VidComponent } from '../vid/vid.component'
 import { GalleryComponent } from '../gallery/gallery.component'
 import { GalleriaModule } from 'primeng/galleria'
 import { ButtonModule } from 'primeng/button'
-import { CardModule } from 'primeng/card'
+import { CardModule } from 'primeng/card';
+import { MultiImageComponent } from '../multi-image/multi-image.component'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -16,6 +17,7 @@ import { CardModule } from 'primeng/card'
         LogoComponent,
         VidComponent,
         GalleryComponent,
+        MultiImageComponent,
     ],
     imports: [
         CardModule,

@@ -1,0 +1,31 @@
+.top-left {
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 25%;
+    // background-color: rgb(0, 255, 132);
+}
+
+.top-right {
+    width: 35%;
+    height: 50%;
+    // background-color: rgb(202, 214, 31);
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    width: 60%;
+    height: 70%;
+    // background-color: rgb(30, 0, 255);
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    // background-color: red;
+    right: 0;
+    width: 35%;
+    height: 45%;
+}
