@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { Product } from '../misc/products'
+import { ProductsService } from '../products.service'
 
 @Component({
     selector: 'app-gallery',
@@ -6,33 +8,31 @@ import { Component } from '@angular/core'
     styleUrl: './gallery.component.scss',
 })
 export class GalleryComponent {
-    images: { src: string }[] = []
-    singleImages: string[] = []
-    multiImage2: string[] = []
-    multiImage2b: string[] = []
-    multiImage3: string[] = []
-    multiImage4: string[] = []
+    products: Product[] = []
+    singleProduct: Product[] = []
+    multiProduct2: Product[] = []
+    multiProduct2b: Product[] = []
+    multiProduct3: Product[] = []
+    multiProduct4: Product[] = []
+
+    constructor(private productsService: ProductsService) {}
 
     ngOnInit() {
-        for (let i = 0; i < 13; i++) {
-            this.images.push({
-                src: `assets/images/gallery/${i}.jpg`,
-            })
-        }
+        this.products = this.productsService.allProducts
         for (let i = 0; i < 2; i++) {
-            this.multiImage2.push(this.images[i].src)
+            this.multiProduct2.push(this.products[i])
         }
         for (let i = 2; i < 6; i++) {
-            this.multiImage4.push(this.images[i].src)
+            this.multiProduct4.push(this.products[i])
         }
         for (let i = 6; i < 9; i++) {
-            this.multiImage3.push(this.images[i].src)
+            this.multiProduct3.push(this.products[i])
         }
         for (let i = 9; i < 11; i++) {
-            this.multiImage2b.push(this.images[i].src)
+            this.multiProduct2b.push(this.products[i])
         }
         for (let i = 11; i < 13; i++) {
-            this.singleImages.push(this.images[i].src)
+            this.singleProduct.push(this.products[i])
         }
     }
 }

@@ -1,8 +1,14 @@
 <div class="relative w-full h-full">
-    <div class="absolute overflow-hidden top">
-        <img [src]="images[0]" />
+    <div class="deep-image-con absolute overflow-hidden top">
+        <app-gallery-image
+            size="medium"
+            [product]="products[0]"
+        ></app-gallery-image>
     </div>
-    <div class="absolute overflow-hidden bottom">
-        <img [src]="images[1]" />
+    <div class="deep-image-con absolute overflow-hidden bottom">
+        <app-gallery-image
+            size="medium"
+            [product]="products[1]"
+        ></app-gallery-image>
     </div>
 </div>

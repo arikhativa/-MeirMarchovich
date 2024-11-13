@@ -13,3 +13,5 @@ export enum PagesNames {
     CONTACT = 'Contact',
     LICENSES = 'Licenses',
 }
+
+export type HeaderSize = 'big' | 'small' | 'medium'

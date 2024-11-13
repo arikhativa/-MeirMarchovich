@@ -1,0 +1,16 @@
+<div class="slider-hidden-header-con absolute bottom-0 w-full">
+    <h4
+        class="slider-hidden-header"
+        [ngClass]="{
+            'small': size === 'small',
+            'medium': size === 'medium',
+            'big': size === 'big',
+    }"
+    >
+        {{ header }}
+    </h4>
+</div>
+<img
+    class="deep-image"
+    [src]="product.img"
+/>

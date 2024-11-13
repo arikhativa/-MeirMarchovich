@@ -6,6 +6,66 @@
 .animation-go-left {
     animation: go-left 30s infinite linear;
 }
+.animation-go-left:hover {
+    animation-play-state: paused;
+}
+
+::ng-deep .animation-go-left .deep-image {
+    transition: filter 0.5s linear;
+}
+
+::ng-deep .animation-go-left .deep-image-con {
+    transition: all 1s ease;
+}
+
+::ng-deep .animation-go-left:hover .deep-image {
+    filter: grayscale(1);
+}
+
+::ng-deep .animation-go-left:hover .deep-image:hover {
+    filter: grayscale(0);
+}
+
+::ng-deep .animation-go-left:hover .deep-image-con:hover {
+    box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.72);
+
+    transform: scale(1.1);
+}
+
+::ng-deep .slider-hidden-header-con {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8138714958639706) 49%
+    );
+}
+
+::ng-deep .slider-hidden-header {
+    pointer-events: none;
+    margin: 20px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+::ng-deep
+    .animation-go-left:hover
+    .deep-image-con:hover
+    .slider-hidden-header-con,
+::ng-deep .animation-go-left:hover .deep-image-con:hover .slider-hidden-header {
+    opacity: 1;
+}
 
 @keyframes go-left {
     100% {

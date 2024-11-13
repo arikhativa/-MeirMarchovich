@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core'
+import { Product } from '../misc/products'
 
 @Component({
     selector: 'app-multi-image-2',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core'
     styleUrl: './multi-image-2.component.scss',
 })
 export class MultiImage2Component {
-    @Input() images!: string[]
+    @Input() products!: Product[]
 }

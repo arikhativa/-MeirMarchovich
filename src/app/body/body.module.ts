@@ -24,7 +24,8 @@ import { TagModule } from 'primeng/tag'
 import { ProductsService } from '../products.service'
 import { InputTextModule } from 'primeng/inputtext'
 import { FormsModule } from '@angular/forms'
-import { MultiSelectModule } from 'primeng/multiselect'
+import { MultiSelectModule } from 'primeng/multiselect';
+import { GalleryImageComponent } from '../gallery-image/gallery-image.component'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -41,6 +42,7 @@ import { MultiSelectModule } from 'primeng/multiselect'
         ProductsComponent,
         ProductsHeroComponent,
         ProductsStoreComponent,
+        GalleryImageComponent,
     ],
     providers: [ProductsService],
     imports: [

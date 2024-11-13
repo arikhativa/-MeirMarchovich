@@ -12,8 +12,8 @@ export enum ProductSubType {
 }
 
 export interface Product {
-    name: string
     img: string
+    name: string
     type: ProductType
     subtype: ProductSubType
 }
@@ -89,6 +89,18 @@ export const allProducts: Product[] = [
         type: ProductType.PLASTICS,
         subtype: ProductSubType.PARAFFIN,
         name: 'paraffin 36',
+        img: '',
+    },
+    {
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.PARAFFIN,
+        name: 'paraffin 98',
+        img: '',
+    },
+    {
+        type: ProductType.PLASTICS,
+        subtype: ProductSubType.PARAFFIN,
+        name: 'paraffin 1120',
         img: '',
     },
 ]

@@ -1,16 +1,16 @@
 <app-single-image
-    [image]="image"
-    *ngIf="image"
+    [product]="product"
+    *ngIf="product"
 ></app-single-image>
 <app-multi-image-2
-    [images]="images || []"
-    *ngIf="images?.length === 2"
+    [products]="products || []"
+    *ngIf="products?.length === 2"
 ></app-multi-image-2>
 <app-multi-image-3
-    [images]="images || []"
-    *ngIf="images?.length === 3"
+    [products]="products || []"
+    *ngIf="products?.length === 3"
 ></app-multi-image-3>
 <app-multi-image-4
-    [images]="images || []"
-    *ngIf="images?.length === 4"
+    [products]="products || []"
+    *ngIf="products?.length === 4"
 ></app-multi-image-4>
