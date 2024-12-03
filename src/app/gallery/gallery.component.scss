@@ -4,6 +4,7 @@
 }
 
 .animation-go-left {
+    animation: go-left 30s infinite linear;
 }
 .animation-go-left:hover {
     animation-play-state: paused;
