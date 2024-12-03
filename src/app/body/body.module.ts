@@ -25,7 +25,9 @@ import { ProductsService } from '../products.service'
 import { InputTextModule } from 'primeng/inputtext'
 import { FormsModule } from '@angular/forms'
 import { MultiSelectModule } from 'primeng/multiselect';
-import { GalleryImageComponent } from '../gallery-image/gallery-image.component'
+import { GalleryImageComponent } from '../gallery-image/gallery-image.component';
+import { AboutComponent } from '../about/about.component';
+import { TextWithImageComponent } from '../text-with-image/text-with-image.component'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -43,6 +45,8 @@ import { GalleryImageComponent } from '../gallery-image/gallery-image.component'
         ProductsHeroComponent,
         ProductsStoreComponent,
         GalleryImageComponent,
+        AboutComponent,
+        TextWithImageComponent,
     ],
     providers: [ProductsService],
     imports: [

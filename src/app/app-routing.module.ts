@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { IntroComponent } from './intro/intro.component'
 import { ROUTER_PATHS } from './misc/types'
 import { ProductsComponent } from './products/products.component'
+import { AboutComponent } from './about/about.component'
 
 const routes: Routes = [
     {
@@ -15,7 +16,7 @@ const routes: Routes = [
     },
     {
         path: ROUTER_PATHS.ABOUT.replace(/^\//, ''),
-        component: IntroComponent,
+        component: AboutComponent,
     },
     {
         path: ROUTER_PATHS.CONTACT.replace(/^\//, ''),

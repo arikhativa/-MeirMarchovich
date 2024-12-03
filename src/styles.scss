@@ -97,6 +97,14 @@ p {
     transform: translateX(-50%);
 }
 
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
 // Animations
 @keyframes fadeIn {
     from {

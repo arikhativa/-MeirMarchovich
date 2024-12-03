@@ -1,0 +1,26 @@
+<article
+    class="relative overflow-hidden flex"
+    [ngClass]="{
+        'rtl': prop.textLocation === 'right',
+        'ltr': prop.textLocation === 'left',
+    }"
+>
+    <img
+        class="absolute top-0 max-h-25rem"
+        [ngClass]="{
+            'left-0': prop.textLocation === 'right',
+            'right-0': prop.textLocation === 'left',
+        }"
+        [src]="prop.image"
+    />
+    <div class="m-4 ltr max-w-30rem">
+        <h2>{{ prop.title }}</h2>
+        <p [innerHTML]="prop.body"></p>
+        <a
+            *ngIf="prop.link"
+            [href]="prop.link.url"
+        >
+            {{ prop.link.text }}
+        </a>
+    </div>
+</article>
