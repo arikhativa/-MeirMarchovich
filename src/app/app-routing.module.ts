@@ -4,6 +4,7 @@ import { IntroComponent } from './intro/intro.component'
 import { ROUTER_PATHS } from './misc/types'
 import { ProductsComponent } from './products/products.component'
 import { AboutComponent } from './about/about.component'
+import { LicensesComponent } from './licenses/licenses.component'
 
 const routes: Routes = [
     {
@@ -24,7 +25,7 @@ const routes: Routes = [
     },
     {
         path: ROUTER_PATHS.LICENSES.replace(/^\//, ''),
-        component: IntroComponent,
+        component: LicensesComponent,
     },
 ]
 

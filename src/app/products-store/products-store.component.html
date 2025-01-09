@@ -37,8 +37,10 @@
                                 [severity]="getColorByType(product.type)"
                             />
                             <p-tag
+                                *ngIf="product.subtype"
+                                class="opacity-70"
                                 [value]="product.subtype"
-                                severity="secondary"
+                                [severity]="getColorBySubType(product.subtype)"
                                 [rounded]="true"
                             />
                         </span>

@@ -27,7 +27,8 @@ import { FormsModule } from '@angular/forms'
 import { MultiSelectModule } from 'primeng/multiselect';
 import { GalleryImageComponent } from '../gallery-image/gallery-image.component';
 import { AboutComponent } from '../about/about.component';
-import { TextWithImageComponent } from '../text-with-image/text-with-image.component'
+import { TextWithImageComponent } from '../text-with-image/text-with-image.component';
+import { LicensesComponent } from '../licenses/licenses.component'
 @NgModule({
     declarations: [
         NavbarComponent,
@@ -47,6 +48,7 @@ import { TextWithImageComponent } from '../text-with-image/text-with-image.compo
         GalleryImageComponent,
         AboutComponent,
         TextWithImageComponent,
+        LicensesComponent,
     ],
     providers: [ProductsService],
     imports: [
